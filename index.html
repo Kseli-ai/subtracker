@@ -1,0 +1,122 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Подписки</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0c0a14"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><style>
+*{box-sizing:border-box;margin:0;font-family:Inter,"DejaVu Sans",sans-serif}
+body{background:#07060b;display:flex;justify-content:center;min-height:100vh}
+.phone{width:100%;max-width:430px;min-height:100vh;position:relative;color:#fff;background:radial-gradient(circle at 20% 10%,#5b1dff55,transparent 45%),radial-gradient(circle at 90% 40%,#ff2d8a44,transparent 40%),#0c0a14;padding:40px 22px 110px}
+.top{display:flex;justify-content:space-between;align-items:center}.hi{font-size:14px;color:#9b93b8}.title{font-size:28px;font-weight:800}
+.ring{margin:30px auto 10px;width:250px;height:250px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px #b44dff55}
+.in{width:200px;height:200px;border-radius:50%;background:#0c0a14;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.sum{font-size:34px;font-weight:900}.lbl{color:#9b93b8;font-size:13px}
+.h{margin:26px 0 12px;font-weight:700}
+.c{display:flex;align-items:center;gap:12px;padding:14px;border-radius:20px;background:#ffffff0d;border:1px solid #ffffff14;margin-bottom:10px;cursor:pointer}
+.ic{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900}
+.n{flex:1;min-width:0}.n b{display:block}.n small{color:#9b93b8}
+.d{font-size:12px;padding:5px 10px;border-radius:99px;background:#ffffff14;color:#cfc8e8;font-weight:700;white-space:nowrap}.hot{background:#ff2d8a33;color:#ff7ab8}
+.ring.zero{border:3px dashed #b44dff99;box-shadow:0 0 50px #b44dff44}.first{display:block;margin:10px auto;padding:16px 22px;border:0;border-radius:18px;color:#fff;font-weight:800;font-size:16px;background:linear-gradient(135deg,#b44dff,#ff4d9d);cursor:pointer}
+.av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#b44dff,#ff4d9d);cursor:pointer}.menu{position:absolute;right:0;top:50px;background:#15121f;border:1px solid #ffffff22;border-radius:16px;padding:6px;z-index:5;white-space:nowrap}.menu a{display:block;padding:10px 14px;border-radius:10px;cursor:pointer}.menu a:hover{background:#ffffff14}
+.pill{display:inline-block;margin-top:6px;padding:8px 16px;border-radius:99px;background:#b44dff26;border:1px solid #b44dff66;color:#e6d9ff;font-weight:800;font-size:15px}.pill:empty{display:none}
+.c.t{border:2px dashed #b44dff88;background:#b44dff12}.c.u{border:2px dashed #ff4d9d;background:#ff4d9d14;box-shadow:0 0 30px #ff4d9d55}
+.tag{display:inline-block;font-size:10px;font-weight:800;padding:2px 7px;border-radius:99px;background:#b44dff33;color:#d9a8ff;margin-left:6px;vertical-align:middle}
+.c.t .d{background:#b44dff33;color:#d9a8ff}.c.u .d{background:#ff4d9d;color:#fff;animation:pulse 1.4s infinite}.c.u .tag{background:#ff4d9d33;color:#ff9ccc}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #ff4d9d66}50%{box-shadow:0 0 0 7px #ff4d9d00}}
+.acts{display:flex;gap:8px;margin:-4px 0 12px}.acts button{flex:1;padding:12px;border:0;border-radius:14px;font-weight:800;font-size:14px;cursor:pointer}.acts .x{background:#ff4d9d22;color:#ff9ccc}.acts .k{background:#ffffff14;color:#fff}
+.chk{display:flex!important;align-items:center;gap:10px;margin-top:14px!important;color:#fff!important;font-size:14px!important}.chk input{width:20px;height:20px}
+.p{font-weight:800;white-space:nowrap}.empty{color:#9b93b8;text-align:center;padding:20px}
+.fab{position:fixed;bottom:30px;left:50%;margin-left:150px;width:60px;height:60px;border-radius:20px;border:0;color:#fff;background:linear-gradient(135deg,#b44dff,#ff4d9d);font-size:32px;box-shadow:0 10px 30px #ff4d9d66;cursor:pointer}
+@media(max-width:430px){.fab{left:auto;right:22px;margin:0}}
+dialog{background:#15121f;color:#fff;border:0;border-top:1px solid #ffffff22}
+dialog{margin:auto auto 0;max-width:430px;width:100%;border-radius:32px 32px 0 0;padding:14px 22px 26px;max-height:92vh;overflow:auto}
+dialog[open]{animation:up .25s ease-out}@keyframes up{from{transform:translateY(100%)}}
+.grab{width:44px;height:5px;border-radius:9px;background:#ffffff33;margin:0 auto 14px}dialog h2{font-size:24px;font-weight:800}.sub{color:#9b93b8;font-size:13px;margin:2px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.s{border-radius:18px;padding:10px 2px;text-align:center;background:#ffffff0a;border:1px solid #ffffff14;font-size:11px;color:#cfc8e8;cursor:pointer}
+.s i{display:flex;width:40px;height:40px;margin:0 auto 6px;border-radius:13px;align-items:center;justify-content:center;font-style:normal;font-weight:900;color:#fff;font-size:16px}
+.s.on{border:2px solid #ff4d9d;background:#ff4d9d1a;box-shadow:0 0 24px #ff4d9d44;color:#fff}
+.bigp{font-size:36px!important;font-weight:900;text-align:center}
+.seg{display:flex;background:#0c0a14;border-radius:14px;padding:4px;border:1px solid #ffffff14}.seg label{flex:1;margin:0}.seg input{display:none}
+.seg span{display:block;text-align:center;padding:10px;border-radius:10px;font-size:13px;color:#9b93b8;font-weight:700;cursor:pointer}.seg input:checked+span{background:linear-gradient(135deg,#b44dff,#ff4d9d);color:#fff}
+.two{display:flex;gap:10px}.two>div{flex:1}.two input[type=color]{height:44px;padding:4px}
+.go{width:100%;margin-top:18px;padding:18px!important;font-size:17px;border-radius:20px!important;box-shadow:0 10px 30px #ff4d9d55}
+dialog::backdrop{background:#000a}dialog label{display:block;font-size:13px;color:#9b93b8;margin:10px 0 4px}
+dialog input,dialog select{width:100%;padding:10px;border-radius:12px;border:1px solid #ffffff22;background:#0c0a14;color:#fff;font-size:15px}
+.row{display:flex;gap:8px;margin-top:18px}.row button{flex:1;padding:12px;border-radius:14px;border:0;font-weight:700;cursor:pointer}
+.ok{background:linear-gradient(135deg,#b44dff,#ff4d9d);color:#fff}.del{background:#ff2d8a22;color:#ff7ab8}.cn{background:#ffffff14;color:#fff}
+</style></head><body><div class="phone">
+<div class="top"><div><div class="hi" id="month"></div><div class="title">Подписки</div></div><div style="position:relative"><div class="av" id="av"></div><div class="menu" id="menu" hidden><a id="exp">Экспорт в файл</a><a id="imp">Импорт из файла</a><a id="cur">Валюта: <b id="curv"></b></a></div></div></div>
+<div class="ring" id="ring"><div class="in"><div class="sum" id="sum"></div><div class="lbl" id="cnt"></div></div></div>
+<div style="text-align:center"><span class="pill" id="year"></span></div><div class="h" id="hdr">Скоро спишется</div><input type="file" id="file" accept=".json" hidden><div id="list"></div>
+<button class="fab" id="add" aria-label="Добавить">+</button></div>
+<dialog id="dlg"><form method="dialog" id="f"><div class="grab"></div>
+<h2 id="dt">Новая подписка</h2><div class="sub" id="dsub">Выбери сервис или впиши свой</div>
+<div class="grid" id="grid"></div>
+<label>Сервис</label><input name="name" required maxlength="40" placeholder="Название">
+<label id="plbl">Сумма</label><input name="price" class="bigp" type="number" min="0" step="0.01" required placeholder="0">
+<label>Как часто</label><div class="seg"><label><input type="radio" name="period" value="1" checked><span>Месяц</span></label><label><input type="radio" name="period" value="3"><span>3 месяца</span></label><label><input type="radio" name="period" value="12"><span>Год</span></label></div>
+<div class="two"><div><label>Следующее списание</label><input name="next" type="date" required></div><div><label>Цвет</label><input name="color" type="color" value="#b44dff"></div></div>
+<label class="chk"><input type="checkbox" name="trial"> Пробный период, дата выше — первое списание</label>
+<button class="ok go" id="go">Добавить</button>
+<div class="row"><button type="button" class="del" id="rm">Удалить</button><button type="button" class="cn" id="cancel">Отмена</button></div>
+</form></dialog>
+<script>
+// Храним только название, сумму, период, дату и цвет. Никаких карт и логинов.
+const KEY='subtracker.v1';const $=s=>document.querySelector(s);
+function valid(x){return x&&typeof x.name==='string'&&x.name.trim()&&x.name.length<=40&&typeof x.price==='number'&&isFinite(x.price)&&x.price>=0&&[1,3,12].includes(x.period)&&/^\d{4}-\d{2}-\d{2}$/.test(x.next)&&!isNaN(new Date(x.next+'T00:00'))&&/^#[0-9a-fA-F]{6}$/.test(x.color)&&(x.trial===undefined||typeof x.trial==='boolean')}
+let subs;try{subs=JSON.parse(localStorage.getItem(KEY)||'[]');if(!Array.isArray(subs))subs=[]}catch(e){subs=[]}
+subs=subs.filter(valid);let editing=null;
+const save=()=>localStorage.setItem(KEY,JSON.stringify(subs));
+const day=d=>{d=new Date(d);d.setHours(0,0,0,0);return d};
+const today=()=>day(new Date());
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function roll(s){ // переносит прошедшую дату списания на следующий период
+  let n=day(s.next+'T00:00');const t=today();
+  if(n<t)s.trial=false;while(n<t){n.setMonth(n.getMonth()+ +s.period)}
+  s.next=iso(n);return n}
+const CURS=['₽','$','€','₸','₴','£'];let CUR=localStorage.getItem(KEY+'.cur');if(!CURS.includes(CUR))CUR='₽';
+const rub=v=>Math.round(v).toLocaleString('ru-RU')+' '+CUR;
+const daysWord=n=>n===0?'сегодня':n===1?'завтра':n+' '+(n%10==1&&n%100!=11?'день':[2,3,4].includes(n%10)&&![12,13,14].includes(n%100)?'дня':'дней');
+function render(){
+  subs.forEach(roll);save();$('#curv').textContent=CUR;$('#plbl').textContent='Сумма, '+CUR;
+  $('#month').textContent=new Date().toLocaleDateString('ru-RU',{month:'long'}).replace(/^./,c=>c.toUpperCase());
+  const paid=subs.filter(s=>!s.trial),monthly=paid.map(s=>s.price/s.period),total=monthly.reduce((a,b)=>a+b,0);
+  $('#sum').textContent=rub(total);$('#year').textContent=total?'≈ '+rub(total*12)+' в год':'';$('#cnt').textContent=subs.length?'в месяц · '+paid.length+' подп.'+(subs.length>paid.length?' + '+(subs.length-paid.length)+' проб.':''):'нет подписок';
+  let acc=0,stops=paid.map((s,i)=>{const a=acc;acc+=monthly[i]/total*100;return `${s.color} ${a}% ${acc}%`});
+  $('#ring').classList.toggle('zero',!total);$('#ring').style.background=total?`conic-gradient(${stops.join(',')})`:'none';
+  $('#hdr').hidden=$('#add').hidden=!subs.length;const sorted=[...subs].sort((a,b)=>a.next.localeCompare(b.next)),L=$('#list');L.innerHTML='';
+  if(!sorted.length){L.innerHTML='<button class="first">Добавить первую подписку</button>';L.firstChild.onclick=()=>$('#add').click()}
+  for(const s of sorted){const dd=Math.round((day(s.next+'T00:00')-today())/864e5);
+    const el=document.createElement('div');const tr=s.trial,ur=tr&&dd<=2;el.className='c'+(tr?(ur?' u':' t'):'');
+    el.innerHTML=`<div class="ic"></div><div class="n"><b></b><small></small></div><div class="d ${!tr&&dd<=3?'hot':''}">${daysWord(dd)}</div><div class="p">${rub(s.price)}</div>`;
+    el.querySelector('.ic').style.background=s.color;el.querySelector('.ic').textContent=s.name[0].toUpperCase();
+    el.querySelector('b').textContent=s.name;if(tr){const g=document.createElement('span');g.className='tag';g.textContent='ПРОБНАЯ';el.querySelector('b').append(g)}
+    el.querySelector('small').textContent=(tr?'первое списание ':'')+day(s.next+'T00:00').toLocaleDateString('ru-RU',(day(s.next+'T00:00')-today())/864e5>300||day(s.next+'T00:00').getFullYear()!==today().getFullYear()?{day:'numeric',month:'long',year:'numeric'}:{day:'numeric',month:'long'}).replace(' г.','');
+    el.onclick=()=>open(s);L.appendChild(el);
+    if(ur){const a=document.createElement('div');a.className='acts';a.innerHTML='<button class="x">Отменил</button><button class="k">Оставляю</button>';
+      a.querySelector('.x').onclick=()=>{subs=subs.filter(x=>x!==s);render()};a.querySelector('.k').onclick=()=>{s.trial=false;render()};L.appendChild(a)}}
+  remind(sorted)}
+const PRESETS=[['Netflix','#e50914','N'],['Spotify','#1db954','S'],['YouTube','#ff0033','▶'],['Яндекс Плюс','#ffcc00','Я'],['iCloud+','#0a84ff','i'],['Telegram','#2aabee','T'],['Кинопоиск','#ff6a00','К'],['Свой','#b44dff','+']];
+function grid(sel){const g=$('#grid');g.innerHTML='';PRESETS.forEach(([n,c,l])=>{const d=document.createElement('div');d.className='s'+(sel===n?' on':'');
+ d.innerHTML='<i></i>';d.firstChild.style.background=n==='Свой'?'#ffffff14':c;if(n==='Яндекс Плюс')d.firstChild.style.color='#000';d.firstChild.textContent=l;d.append(n);
+ d.onclick=()=>{const f=$('#f');f.name.value=n==='Свой'?'':n;f.color.value=c;grid(n);(n==='Свой'?f.name:f.price).focus();label()};g.appendChild(d)})}
+function label(){const f=$('#f'),p=+f.price.value,per={1:'мес',3:'3 мес',12:'год'}[f.period.value];$('#go').textContent=(editing?'Сохранить':'Добавить')+(p?' · '+rub(p)+'/'+per:'')}
+$('#f').addEventListener('input',label);
+function open(s){editing=s||null;const f=$('#f');f.reset();$('#dt').textContent=s?'Подписка':'Новая подписка';$('#rm').style.display=s?'':'none';$('#grid').style.display=$('#dsub').style.display=s?'none':'';grid(null);
+  if(s){for(const k of['name','price','period','next','color'])f[k].value=s[k];f.trial.checked=!!s.trial}else f.next.value=iso(today());
+  label();$('#dlg').showModal()}
+$('#add').onclick=()=>{open();if('Notification'in window&&Notification.permission==='default')Notification.requestPermission()};
+$('#cancel').onclick=()=>$('#dlg').close();
+$('#rm').onclick=()=>{if(confirm('Удалить подписку?')){subs=subs.filter(x=>x!==editing);$('#dlg').close();render()}};
+$('#f').onsubmit=()=>{const f=$('#f'),o={name:f.name.value.trim(),price:+f.price.value,period:+f.period.value,next:f.next.value,color:f.color.value,trial:f.trial.checked};if(!valid(o))return alert('Проверь поля');
+  if(editing)Object.assign(editing,o);else subs.push({id:Date.now(),...o});render()};
+function remind(list){ // напоминание за 1 день, без сумм на экране блокировки
+  if(!('Notification'in window)||Notification.permission!=='granted')return;
+  const sent=JSON.parse(localStorage.getItem(KEY+'.sent')||'{}');
+  for(const s of list){const dd=Math.round((day(s.next+'T00:00')-today())/864e5),k=s.id+':'+s.next;
+    if(dd<=(s.trial?2:1)&&!sent[k]){new Notification(s.trial?'Пробный период заканчивается':'Скоро списание',{body:s.name+' · '+daysWord(dd)});sent[k]=1}}
+  localStorage.setItem(KEY+'.sent',JSON.stringify(sent))}
+$('#exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(subs,null,1)],{type:'application/json'}));a.download='subscriptions.json';a.click()};
+$('#cur').onclick=()=>{CUR=CURS[(CURS.indexOf(CUR)+1)%CURS.length];localStorage.setItem(KEY+'.cur',CUR);render()};
+$('#imp').onclick=()=>$('#file').click();
+$('#av').onclick=e=>{e.stopPropagation();$('#menu').hidden=!$('#menu').hidden};document.addEventListener('click',()=>$('#menu').hidden=true);
+$('#file').onchange=async e=>{try{const d=JSON.parse(await e.target.files[0].text());if(!Array.isArray(d))throw 0;const ok=d.filter(valid);
+  if(confirm('Заменить текущие подписки на '+ok.length+' из файла?'+(ok.length<d.length?' Пропущено с ошибками: '+(d.length-ok.length):''))){subs=ok.map((x,i)=>({...x,id:x.id||Date.now()+i}));render()}}catch(_){alert('Не получилось прочитать файл')}e.target.value=''};
+render();
+if('serviceWorker'in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js');
+</script></body></html>
